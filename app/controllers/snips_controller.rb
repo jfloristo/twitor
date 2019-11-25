@@ -29,7 +29,7 @@ class SnipsController < ApplicationController
 
     respond_to do |format|
       if @snip.save
-        format.html { redirect_to @snip, notice: 'Snip was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Snip was successfully created.' }
         format.json { render :show, status: :created, location: @snip }
       else
         format.html { render :new }
