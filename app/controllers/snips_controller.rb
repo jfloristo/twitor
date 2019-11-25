@@ -15,7 +15,7 @@ class SnipsController < ApplicationController
 
   # GET /snips/new
   def new
-    @snip = Snip.new
+    @snip = current_user.snips.build
   end
 
   # GET /snips/1/edit
@@ -25,7 +25,7 @@ class SnipsController < ApplicationController
   # POST /snips
   # POST /snips.json
   def create
-    @snip = Snip.new(snip_params)
+    @snip = current_user.snips.build(snip_params)
 
     respond_to do |format|
       if @snip.save
