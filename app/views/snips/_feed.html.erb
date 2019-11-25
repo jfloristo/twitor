@@ -1,4 +1,5 @@
 <div class="column is-half">
+    <% if user_signed_in? %>
     <article class="media box">
         <figure class="media-left">
             <p class="image is-64x64">
@@ -9,6 +10,7 @@
             <%= render 'snips/form' %>
         </div>
     </article>
+    <% end %>
 
 
     <% @snips.each do | snip | %>
@@ -21,10 +23,11 @@
                 </div>
                 <div class="media-content">
                     <div class="content">
-                        <strong>User1</strong><br />
-                        <small>@user1</small><br/>
+                        <strong><%= snip.user.name %></strong><br />
+                        <small><%= snip.user.username %></small><br/>
                         <p><%= snip.snip %></p>
                     </div>
+                    <% if user_signed_in? %>
                     <nav class="level">
                         <div class="level-left is-mobile">
                             <%= link_to snip, class: "level-item" do%>
@@ -37,6 +40,7 @@
                                 <span class="icon"><i class="fa fa-trash" aria-hidden="true"></i></span>
                             <% end %>
                         </div>
+                    <% end %>  
                     </nav>
                 </div>
             </article>
