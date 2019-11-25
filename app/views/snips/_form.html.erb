@@ -1,0 +1,22 @@
+<%= form_with(model: snip, local: true) do |form| %>
+  <% if snip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snip.errors.count, "error") %> prohibited this snip from being saved:</h2>
+
+      <ul>
+        <% snip.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :snip %>
+    <%= form.text_area :snip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

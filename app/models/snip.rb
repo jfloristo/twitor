@@ -1,0 +1,2 @@
+class Snip < ApplicationRecord
+end
