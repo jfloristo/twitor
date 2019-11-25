@@ -1,27 +1,8 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <%= render 'feed' %>
+    </div>
+  </div>
+</section>
 
-<h1>Snips</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Snip</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @snips.each do |snip| %>
-      <tr>
-        <td><%= snip.snip %></td>
-        <td><%= link_to 'Show', snip %></td>
-        <td><%= link_to 'Edit', edit_snip_path(snip) %></td>
-        <td><%= link_to 'Destroy', snip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Snip', new_snip_path %>
