@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+created with 
+ruby 2.6.5p114 (2019-10-01 revision 67812) [x64-mingw32] 
+and
+Rails 6.0.1
 
-* Ruby version
+run bundle install before opening
 
-* System dependencies
+sample accounts include:
 
-* Configuration
+test1@t.com
+test2@t.com
+test3@t.com
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+password: asdasd
