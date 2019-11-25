@@ -5,6 +5,7 @@ class SnipsController < ApplicationController
   # GET /snips.json
   def index
     @snips = Snip.all.order("created_at DESC")
+    @snip = Snip.new
   end
 
   # GET /snips/1
